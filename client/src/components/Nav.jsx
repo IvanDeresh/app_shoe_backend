@@ -81,7 +81,7 @@ const Nav = () => {
                 {navLinks.map((link) => (
                   <li
                     key={link.label}
-                    className=" w-full h-[25%] flex justify-center items-center "
+                    className=" w-full flex flex-col justify-center items-center h-[25%]"
                   >
                     <a
                       href={link.href}
@@ -89,7 +89,7 @@ const Nav = () => {
                     >
                       {link.label}
                       <div className="flex justify-center ">
-                        <div className="w-[100px] h-[2px] bg-coral-red hover:w-[50px] hover:translate-y-1"></div>
+                        <div className="w-[100px] h-[4px] rounded-full bg-coral-red hover:w-[50px] hover:translate-y-1"></div>
                       </div>
                     </a>
                   </li>
@@ -110,7 +110,7 @@ const Nav = () => {
         </div>
       </nav>
       {basket ? (
-        <div className="absolute flex flex-col justify-around items-start  top-[150px] right-10 w-[400px] h-auto rounded-2xl bg-white shadow-2xl shadow-coral-red">
+        <div className="absolute min-w-xl:mr-[30%] flex flex-col justify-around items-start  top-[150px] 2xl:right-[25%] right-[10%] w-[400px] h-auto rounded-2xl bg-white shadow-2xl shadow-coral-red">
           {products.map((product) => (
             <li
               key={product.name}
