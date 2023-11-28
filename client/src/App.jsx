@@ -10,6 +10,7 @@ import {
   Footer,
 } from "./sections";
 import Nav from "./components/Nav";
+import LoginRegisterForm from "./components/LoginRegisterForm";
 const App = () => (
   <main className="relative">
     <Nav />

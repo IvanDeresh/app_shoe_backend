@@ -7,11 +7,10 @@ const ListOfShoe = () => {
   const [clicked, setClicked] = useState(false);
   useEffect(() => {
     axios
-      .get("http://localhost:3002/api/data?limit=10")
+      .get("http://localhost:3001/shoes?limit=10")
       .then((response) => setShoes(response.data))
       .catch((error) => console.error("Error fetching shoes:", error));
   }, []);
-
   return (
     <div
       onClick={

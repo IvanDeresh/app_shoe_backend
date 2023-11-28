@@ -39,6 +39,7 @@ export default {
       },
       colors: {
         primary: "#ECEEFF",
+        "light-coral": "#fbc8c3",
         "coral-red": "#FF6452",
         "slate-gray": "#6D6D6D",
         "pale-blue": "#F5F6FF",
@@ -46,6 +47,7 @@ export default {
       },
       boxShadow: {
         "3xl": "0 10px 40px rgba(0, 0, 0, 0.1)",
+        "shadow-down": "0 4px 8px rgba(0, 0, 0, 0.5);",
       },
       backgroundImage: {
         hero: "url('assets/images/collection-background.svg')",
