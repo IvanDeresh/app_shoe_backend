@@ -8,7 +8,6 @@ const LoginRegisterForm = () => {
   const [balance, setBalance] = useState(0);
   const [message, setMessage] = useState("");
   const [themeForm, setThemeForm] = useState("Login");
-
   const handleLogin = async () => {
     try {
       const response = await axios.post("http://localhost:3001/auth/login", {

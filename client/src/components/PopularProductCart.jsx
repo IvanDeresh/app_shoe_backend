@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 import { star } from "../assets/icons";
-const PopularProductCart = ({ imgURL, name, price, description }) => {
+import { useDispatch } from "react-redux";
+import { addProduct } from "../store/basketReducer";
+const PopularProductCart = ({ id, imgURL, name, price, description }) => {
+  const dispatch = useDispatch();
   return (
     <div>
       <div>
@@ -21,7 +25,14 @@ const PopularProductCart = ({ imgURL, name, price, description }) => {
         {price} $
       </h2>
       {description && <p>{description}</p>}
-      <button className="font-bold text-white bg-coral-red mt-[20px] rounded-full w-[40px] h-[40px]">
+      <button
+        onClick={() => {
+          dispatch(
+            addProduct({ id: uuidv4(), name: name, price: price, img: imgURL })
+          );
+        }}
+        className="font-bold text-white bg-coral-red mt-[20px] rounded-full w-[40px] h-[40px]"
+      >
         +
       </button>
     </div>

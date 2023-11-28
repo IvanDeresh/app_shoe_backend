@@ -13,6 +13,7 @@ const ListOfShoe = () => {
   }, []);
   return (
     <div
+      id="#shoes"
       onClick={
         clicked === true
           ? null
@@ -26,6 +27,7 @@ const ListOfShoe = () => {
         <div className="flex flex-1 gap-12 flex-wrap">
           {shoes.map((shoe) => (
             <PopularProductCart
+              id={shoe._id}
               key={shoe._id}
               imgURL={shoe.picturePath}
               name={shoe.name}
